@@ -55,7 +55,8 @@ public class DiceRestController {
     if ((count < 1) || (count > 10)) {
       JsonObject errResp = Json
           .createObjectBuilder()
-          .add("error", "Valid dice count is between 1 and 10. Your count is %d".formatted(count))
+          .add("error", "Valid dice count is between 1 and 10. Your count is %d"
+              .formatted(count))
           .build();
       String payload = errResp.toString();
       // Return 400
